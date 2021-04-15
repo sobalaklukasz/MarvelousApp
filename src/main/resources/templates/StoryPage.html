@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <title>Marvelous Story</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <h1>Marvelous Hulk Story</h1>
+    <p th:text="${story}"></p>
+</div>
+<div>
+    <img th:src="${image}" alt="Hulk"/>
+    <br>
+    <p style="color: green" th:text="${name}"></p>
+</div>
+<footer>
+    <p th:text="${attributionText}"></p>
+</footer>
+</body>
+
+</html>
