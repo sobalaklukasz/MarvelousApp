@@ -1,37 +1,37 @@
-#Marvelous application
+# Marvelous application
 
-##How to run
+## How to run
 1. Put you API keys .\testapp\src\main\resources\application.properties
 2. mvn spring-boot:run or start com.app.Application.main
 
-##Swagger
+## Swagger
 GET -> http://localhost:8080/swagger-ui.html
 
-##Task 1 - Page with comic
-###Description
+## Task 1 - Page with comic
+### Description
 Using the Marvel API [https://developer.marvel.com/docs], pick a random story
 featuring your favorite character (perhaps The Hulk?). Generate an HTML page
 with the following characteristics:
 * The story's description
 * A list of names and pictures of the characters that features in the story
 * The Marvel attribution text
- ###Solution
+### Solution
 GET -> http://localhost:8080/story
  
-##Task 2 - Rest API
-###Description
+## Task 2 - Rest API
+### Description
 Generate a Rest API with the following features (Encapsulate the Marvel API return some data aggregate about):
 * given a set of characters, get all stories where they all appear together
 * given a set of characters, get the number of comics and events that they appear together
 * a ~~Secured~~ api where users can vote on their favourite character
-###Solution
+### Solution
 GET -> http://localhost:8080/characters/Vision,Wasp/stories
 
 GET -> http://localhost:8080/characters/Spider-Man,Hulk,Thor/comicsAndEvents
 
 GET -> http://localhost:8080/characterVote (results) | GET http://localhost:8080/characterVote/1/ (vote)
 
-###TODO
+### TODO
 * Implement more unit test, cover edge cases
 * Implement error handling and server unavailability
 * Implement security aspects
